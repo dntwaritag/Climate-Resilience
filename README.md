@@ -47,7 +47,7 @@ Each model is evaluated using the following metrics:
 ## File Structure
 ```
 Climate Resilience/
-├── notebook.ipynb  # Jupyter Notebook with full implementation
+├── Summative_Intro_to_ml_Denys_Ntwaritaganzwa_assignment.ipynb  # Jupyter Notebook with full implementation
 ├── saved_models/   # Directory containing saved models
 │   ├── nn_instance_1.h5
 │   ├── nn_instance_2.h5
