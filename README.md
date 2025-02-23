@@ -4,13 +4,11 @@
 This project explores the implementation of various machine learning models to enhance climate resilience through data-driven weather classification. The study leverages the Seattle Weather Dataset, applying classical ML algorithms (SVM) alongside deep learning models with optimization techniques such as regularization, early stopping, dropout, and hyperparameter tuning.
 
 ## Problem Statement
-Traditional methods of predicting weather and crop yields often fail to
-account for complex interactions between climate variables and
-agricultural conditions
+Climate change poses significant challenges to weather prediction and agricultural planning. Traditional forecasting models struggle to capture the complex relationships between meteorological variables, leading to inaccurate predictions. This project aims to develop machine learning models that improve weather classification accuracy, enabling better decision-making for climate resilience and sustainable agriculture.
 
 ## Dataset Description
-- **Dataset**: Seattle Weather Dataset here
-- **Source**: Publicly available dataset here
+- **Dataset**: Seattle Weather **[Dataset here](https://drive.google.com/file/d/1-Rdcuv-yQCjVdkCMQkgyccx4eGAkjOmL/view?usp=sharing)**
+- **Source**: Publicly available **[Dataset here](https://www.kaggle.com/code/petalme/seattle-weather-prediction/input)**
 - **Problem Statement**: Classifying weather conditions based on historical climate data.
 - **Features Used**: Temperature, Precipitation, Wind Speed,  etc.
 - **Target Variable**: Weather category (Clear, Fog, Rain, Snow)
@@ -30,18 +28,21 @@ Each model is evaluated using the following metrics:
 
 | Model Name     | Optimizer Used | Regularization | Dropout | Early Stopping | Learning Rate | Accuracy | Precision | Recall | F1-Score |
 |---------------|---------------|---------------|--------|--------------|--------------|---------|----------|--------|----------|
-| **SVM Model** | N/A           | N/A           | N/A    | No           | N/A          | **89%**  | 88%      | 87%    | 88%      |
-| **Instance 1** | Adam          | None          | None   | No           | 0.001        | 85%      | 84%      | 83%    | 84%      |
-| **Instance 2** | Adam          | L2 (0.01)     | None   | No           | 0.001        | **90%**  | 89%      | 88%    | 89%      |
-| **Instance 3** | RMSprop       | None          | 0.3, 0.3, 0.3 | Yes (Patience: 3) | 0.0005 | **91%**  | 90%      | 89%    | 90%      |
-| **Instance 4** | SGD           | L1 (0.01)     | 0.2, 0.2, 0.2 | Yes (Patience: 5) | 0.01 | **92%**  | 91%      | 90%    | **91%**  |
-| **Instance 5** | Adam          | L2 (0.001)    | 0.3, 0.4, 0.3 | Yes (Patience: 5) | 0.0001 | **93%**  | **92%**  | **91%**  | **92%**  |
+| **nn_instance_1** | Adam          | None          | None   | No           | 0.001        | 78.23%     | 67.48%     | 78.23%    | 72.12%   |
+| **nn_instance_2** | Adam          | L2 (0.01)     | None   | No           | 0.001        |77.55%  | 66.76%      | 77.55%    | 71.48%      |
+| **nn_instance_3** | RMSprop       | None          | 0.3, 0.3, 0.3 | Yes (Patience: 3) | 0.0005 | 75.51% | 64.71%      | 75.51%   | 69.53%      |
+| **nn_instance_4** | SGD           | L1 (0.01)     | 0.2, 0.2, 0.2 | Yes (Patience: 5) | 0.01 | 76.87%  | 67.26%      | 76.87%    | 70.98%  |
+| **nn_instance_5** | Adam          | L2 (0.001)    | 0.3, 0.4, 0.3 | Yes (Patience: 5) | 0.0001 | 68.03%  | 58.11%  | 68.03%  | 62.57% |
 
 ---
 ## Key Findings & Best Model
-**- Instance 5 (Adam + L2 Regularization + Dropout + Early Stopping)** achieved the highest accuracy (93%) and F1-score (92%).
-**- Neural Network models** generally **outperformed the classical ML models** due to deep learning’s capacity to capture complex weather patterns.
-**- Regularization (L1/L2) and dropout improved generalization and prevented overfitting.**
+**- nn_instance_1** achieved the highest accuracy (78.23%) and F1-score (72.12%).
+
+- Performance varied across models due to different optimization techniques and hyperparameter settings.
+
+**- Precision and recall trade-offs** were observed, indicating varying effectiveness in different weather conditions.
+
+
 
 ## File Structure
 ```
