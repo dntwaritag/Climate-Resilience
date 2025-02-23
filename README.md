@@ -3,6 +3,11 @@
 ## Project Overview
 This project explores the implementation of various machine learning models to enhance climate resilience through data-driven weather classification. The study leverages the Seattle Weather Dataset, applying classical ML algorithms (SVM) alongside deep learning models with optimization techniques such as regularization, early stopping, dropout, and hyperparameter tuning.
 
+## Problem Statement
+Traditional methods of predicting weather and crop yields often fail to
+account for complex interactions between climate variables and
+agricultural conditions
+
 ## Dataset Description
 - **Dataset**: Seattle Weather Dataset here
 - **Source**: Publicly available dataset here
@@ -11,7 +16,16 @@ This project explores the implementation of various machine learning models to e
 - **Target Variable**: Weather category (Clear, Fog, Rain, Snow)
 
 ---
+## Performance Metrics
+Each model is evaluated using the following metrics:
 
+- Accuracy
+- Loss
+- F1-score
+- Precision
+- Recall
+  
+---
 ## Implemented Models
 
 | Model Name     | Optimizer Used | Regularization | Dropout | Early Stopping | Learning Rate | Accuracy | Precision | Recall | F1-Score |
@@ -73,7 +87,7 @@ This project aligns with Rwanda’s strategic **climate resilience goals** and d
 
 
 ## Video Presentation
-.....
+Watch the Demo **[video Link](https://drive.google.com/file/d/1xPVuOydu7vtM7dhopXVRdfLkX4m6mvhY/view?usp=sharing)** here for more.
 
 ## Conclusion
 This project demonstrates the impact of optimization techniques on machine learning models for climate resilience. By leveraging deep learning and hyperparameter tuning, Instance 5 emerged as the best model, achieving the highest accuracy and robustness in predictions.
